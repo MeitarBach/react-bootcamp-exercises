@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
+import VerticalNavBar from "./VerticalNavBar";
 
 function App() {
   return (
     <div className="App">
-      <h1>
-        Hello Gong!
-      </h1>
+        <div className="page-container">
+            <VerticalNavBar/>
+        </div>
     </div>
   );
 }

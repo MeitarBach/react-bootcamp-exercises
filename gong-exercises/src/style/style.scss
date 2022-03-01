@@ -1,0 +1,238 @@
+@import "colors";
+@import "reusable-components";
+
+.page-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+
+  .nav-container {
+    flex-grow: 1;
+
+    .nav-logo {
+      width: 10%;
+
+      svg {
+        border-radius: 99999px;
+      }
+    }
+
+    .nav-logo :hover {
+      background-color: $light-blue-hover;
+      cursor: pointer;
+    }
+
+    .nav-item {
+      display: flex;
+      border: 1px solid blue;
+      border-radius: 15px;
+      height: 2em;
+      margin: 5px;
+      align-items: center;
+
+      svg {
+        height: 50%;
+        margin: 0.5em;
+        display: inline;
+      }
+    }
+
+    .nav-item:hover {
+      background-color: $light-blue-hover;
+      cursor: pointer;
+    }
+  }
+
+  .newsfeed-container {
+    margin: 0px 30px;
+    flex-grow: 3;
+    text-align: left;
+
+    .newsfeed-post-editor {
+      textarea:focus {
+        outline-color: $focus-blue;
+      }
+    }
+
+    .tweet {
+      border: 1px solid blue;
+      border-radius: 15px;
+      margin: 5px;
+      text-align: left;
+
+      b {
+        margin: 10px;
+      }
+
+      p {
+        margin: 5px;
+      }
+
+      .post-actions {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0px 0px 5px 0px;
+        padding: 5px;
+        border-radius: 15px;
+
+        .comment-button:hover {
+          fill: $light-blue-hover;
+          cursor: pointer;
+        }
+
+        .retweet-button:hover {
+          fill: darkseagreen;
+          cursor: pointer;
+        }
+
+        .like-button:hover {
+          fill: red;
+          cursor: pointer;
+        }
+
+        .like-button.liked {
+          background-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .share-button:hover {
+          fill: $light-blue-hover;
+          cursor: pointer;
+        }
+
+        .delete-button:hover {
+          fill: saddlebrown;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .profile-container {
+    margin: 0px 100px;
+    flex-grow: 2;
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      h3 {
+        margin: 4px 0px;
+      }
+
+      svg {
+        margin: 0 20px;
+
+        :hover {
+          fill: $light-blue-hover;
+        }
+      }
+    }
+
+    .profile-body {
+
+      .cover-photo {
+        height: 160px;
+
+        img {
+          width: 100%;
+          height: 225px;
+          overflow: hidden;
+        }
+      }
+
+      .profile-edit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .profile-pic {
+          img {
+            border-radius: 55px;
+            border: 4px solid white;
+            margin: 10px;
+            height: 100px;
+            width: 100px;
+          }
+
+          .profile-pic-captions {
+            margin: 0px 20px;
+          }
+        }
+      }
+
+      h4 {
+        margin: 0;
+      }
+    }
+
+    .profile-about {
+      .profile-about__extra-details, .profile-about__following-followers {
+        margin: 5px 0;
+        span {
+          margin: 0 20px 0 0;
+        }
+
+        svg {
+          height: 1em;
+          width: 1em;
+        }
+      }
+    }
+
+    .profile-activity {
+      margin: 25px 0;
+
+      .activity-nav-bar {
+        display: flex;
+
+
+        .activity-nav-item {
+          flex-grow: 1;
+          height: 40px;
+          text-align: center;
+          vertical-align: middle;
+          line-height: 40px;
+        }
+
+        .selected {
+          font-weight: bold;
+          text-decoration: underline;
+          text-underline-offset: 10px;
+        }
+
+        .activity-nav-item:hover {
+          cursor: pointer;
+          background-color: $light-blue-hover;
+        }
+      }
+    }
+  }
+
+  .trends-container {
+    flex-grow: 2;
+    min-width: 200px;
+
+    .trends {
+      background-color: #EBEEF0;
+      border-radius: 20px;
+      margin-top: 20px;
+      padding: 10px;
+
+      .trends-title {
+        display: flex;
+        justify-content: space-around;
+
+        svg {
+          height: 1em;
+          width: 1em;
+        }
+      }
+
+      .trend-item {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
