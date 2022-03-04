@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import { userShape } from "../data/users";
 
 class ProfilePicture extends Component {
     render() {
@@ -12,6 +14,10 @@ class ProfilePicture extends Component {
             </span>
         );
     }
+}
+
+ProfilePicture.propTypes = {
+    user: PropTypes.shape(userShape)
 }
 
 export default ProfilePicture;

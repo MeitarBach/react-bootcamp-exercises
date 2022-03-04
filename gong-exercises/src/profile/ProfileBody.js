@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import { userShape } from "../data/users";
 import ProfilePicture from "./ProfilePicture";
-import CustomButton, {ButtonType} from "../CustomButton";
+import CustomButton, { ButtonType } from "../CustomButton";
 
 class ProfileBody extends Component {
     render() {
@@ -54,5 +56,9 @@ class ProfileBody extends Component {
         );
     }
 }
+
+ProfileBody.propTypes = {
+    user: PropTypes.shape(userShape)
+};
 
 export default ProfileBody;
