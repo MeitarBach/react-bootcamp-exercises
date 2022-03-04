@@ -18,6 +18,16 @@
   outline: none;
 }
 
+.edit-profile-button {
+  display: block;
+  background-color: white;
+  border-radius: 9999px;
+  color: #1da1f2;
+  width: 8em;
+  height: 2em;
+  margin: 20px;
+}
+
 .tweet-button {
   display: block;
   background-color: #1da1f2;
@@ -28,7 +38,7 @@
   margin: 20px;
 }
 
-.tweet-button:hover {
+.tweet-button:hover, .edit-profile-button:hover {
   background-color: lightskyblue;
   cursor: pointer;
 }

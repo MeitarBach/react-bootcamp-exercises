@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import VerticalNavBar from "./VerticalNavBar";
+import NavBarContainer from "./NavBarContainer";
+import PageContainer from "./PageContainer";
 
 function App() {
   return (
     <div className="App">
-        <div className="page-container">
-            <VerticalNavBar/>
-        </div>
+        <PageContainer/>
     </div>
   );
 }

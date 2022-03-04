@@ -1,6 +1,7 @@
 import React from 'react';
 import "./style/style.css"
 import PropTypes from 'prop-types';
+import CustomButton, {ButtonType} from "./CustomButton";
 
 class NavItem extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ NavItem.propTypes = {
     sectionName: PropTypes.string.isRequired,
 }
 
-class VerticalNavBar extends React.Component {
+class NavBarContainer extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -46,10 +47,11 @@ class VerticalNavBar extends React.Component {
                     <NavItem sectionName="Lists"/>
                     <NavItem sectionName="Profile"/>
                     <NavItem sectionName="More"/>
+                    <CustomButton btnType={ButtonType.TWEET}/>
                 </div>
             </div>
         );
     }
 }
 
-export default VerticalNavBar;
+export default NavBarContainer;
