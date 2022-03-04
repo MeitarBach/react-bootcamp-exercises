@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import NavBarContainer from "./NavBarContainer";
 import PageContainer from "./PageContainer";
 
 function App() {

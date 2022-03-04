@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import { tweets } from "../data/tweets";
+import { userShape } from "../data/users";
 
 class ProfileHeader extends Component {
+    countUserTweets = (userId) => {
+        return tweets.filter(tweet => tweet.author.id === userId).length;
+    }
+
     render() {
         return (
             <div className="profile-header">
@@ -12,8 +18,8 @@ class ProfileHeader extends Component {
                     </g>
                 </svg>
                 <div className="profile-title">
-                    <h3 className="profile-title-name">{this.props.title}</h3>
-                    <span className="profile-title-tweets-num">{this.props.tweetsNumber}</span>
+                    <h3 className="profile-title-name">{this.props.user.fullName}</h3>
+                    <span className="profile-title-tweets-num">{this.countUserTweets(this.props.user.id)}</span>
                 </div>
             </div>
         );
@@ -21,8 +27,7 @@ class ProfileHeader extends Component {
 }
 
 ProfileHeader.propTypes = {
-    title: PropTypes.string.isRequired,
-    tweetsNumber: PropTypes.number.isRequired,
+    user: PropTypes.shape(userShape),
 }
 
 export default ProfileHeader;

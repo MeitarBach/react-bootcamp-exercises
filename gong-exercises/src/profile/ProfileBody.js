@@ -9,7 +9,7 @@ class ProfileBody extends Component {
         return (
             <div className="profile-body">
                 <div className="cover-photo">
-                    <img src={this.props.user.coverPhoto} />
+                    <img src={this.props.user.coverPhoto} alt={"cover"}/>
                 </div>
                 <div className="profile-edit">
                     <ProfilePicture user={this.props.user} captions />

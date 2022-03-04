@@ -7,7 +7,7 @@ class ProfileContainer extends Component {
     render() {
         return (
             <div className="profile-container">
-                <ProfileHeader title="Meitar Bach" tweetsNumber={6} />
+                <ProfileHeader user={Users.Meitar} />
                 <ProfileBody user={Users.Meitar}/>
             </div>
         );
