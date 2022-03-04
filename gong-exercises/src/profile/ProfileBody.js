@@ -11,9 +11,6 @@ class ProfileBody extends Component {
                 </div>
                 <div className="profile-edit">
                     <ProfilePicture user={this.props.user} captions />
-                    {/*<button className="edit-profile-button">*/}
-                    {/*    Edit profile*/}
-                    {/*</button>*/}
                     <CustomButton btnType={ButtonType.EDIT_PROFILE}/>
                 </div>
                 {/*<div className="profile-about">*/}
