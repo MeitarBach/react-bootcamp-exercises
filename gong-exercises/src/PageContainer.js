@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import "./style/style.css"
 import NavBarContainer from "./navbar/NavBarContainer";
 import MainSection, { Sections } from "./MainSection";
+import TrendsContainer from "./TrendsContainer";
 
 class PageContainer extends Component {
     constructor(props) {
@@ -22,6 +23,7 @@ class PageContainer extends Component {
             <div className="page-container">
                 <NavBarContainer changeSection={this.changeSection}/>
                 <MainSection openSection={this.state.mainSection}/>
+                <TrendsContainer/>
             </div>
         );
     }
