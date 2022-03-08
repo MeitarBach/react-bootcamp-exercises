@@ -6,7 +6,7 @@ import PropTyes from "prop-types";
 export const Sections = {
     NEWS_FEED: 'Home',
     USER_PROFILE: 'Profile'
-}
+};
 
 class MainSection extends React.Component {
     getUserTweets = () => {
@@ -17,7 +17,7 @@ class MainSection extends React.Component {
         return (
             <>
                 {this.props.openSection === Sections.NEWS_FEED && <NewsFeedContainer updateTweet={this.props.updateTweet} tweets={this.props.tweets}/>}
-                {this.props.openSection === Sections.USER_PROFILE && <ProfileContainer updateTweet={this.props.updateTweet} userTweets={this.getUserTweets()}/>}
+                {this.props.openSection === Sections.USER_PROFILE && <ProfileContainer changeSection={this.props.changeSection} updateTweet={this.props.updateTweet} userTweets={this.getUserTweets()}/>}
             </>
         );
     }

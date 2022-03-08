@@ -35,7 +35,7 @@ class PageContainer extends Component {
         return (
             <div className="page-container">
                 <NavBarContainer changeSection={this.changeSection}/>
-                <MainSection user={Users.Meitar} updateTweet={this.updateTweet} tweets={this.state.tweets}  openSection={this.state.mainSection}/>
+                <MainSection changeSection={this.changeSection} user={Users.Meitar} updateTweet={this.updateTweet} tweets={this.state.tweets}  openSection={this.state.mainSection}/>
                 <TrendsContainer/>
             </div>
         );

@@ -153,6 +153,7 @@
 }
 .page-container .profile-container .profile-header svg :hover {
   fill: lightskyblue;
+  cursor: pointer;
 }
 .page-container .profile-container .profile-body {
   text-align: left;
