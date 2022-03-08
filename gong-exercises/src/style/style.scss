@@ -53,58 +53,6 @@
         outline-color: $focus-blue;
       }
     }
-
-    .tweet {
-      border: 1px solid blue;
-      border-radius: 15px;
-      margin: 5px;
-      text-align: left;
-
-      b {
-        margin: 10px;
-      }
-
-      p {
-        margin: 5px;
-      }
-
-      .post-actions {
-        display: flex;
-        justify-content: space-evenly;
-        margin: 0px 0px 5px 0px;
-        padding: 5px;
-        border-radius: 15px;
-
-        .comment-button:hover {
-          fill: $light-blue-hover;
-          cursor: pointer;
-        }
-
-        .retweet-button:hover {
-          fill: darkseagreen;
-          cursor: pointer;
-        }
-
-        .like-button:hover {
-          fill: red;
-          cursor: pointer;
-        }
-
-        .like-button.liked {
-          background-color: rgba(255, 0, 0, 0.5);
-        }
-
-        .share-button:hover {
-          fill: $light-blue-hover;
-          cursor: pointer;
-        }
-
-        .delete-button:hover {
-          fill: saddlebrown;
-          cursor: pointer;
-        }
-      }
-    }
   }
 
   .profile-container {
@@ -130,6 +78,7 @@
     }
 
     .profile-body {
+      text-align: left;
 
       .cover-photo {
         height: 160px;
@@ -164,18 +113,18 @@
       h4 {
         margin: 0;
       }
-    }
 
-    .profile-about {
-      .profile-about__extra-details, .profile-about__following-followers {
-        margin: 5px 0;
-        span {
-          margin: 0 20px 0 0;
-        }
+      .profile-about {
+        .profile-about__extra-details, .profile-about__following-followers {
+          margin: 5px 0;
+          span {
+            margin: 0 20px 0 0;
+          }
 
-        svg {
-          height: 1em;
-          width: 1em;
+          svg {
+            height: 1em;
+            width: 1em;
+          }
         }
       }
     }

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ProfileHeader from "./ProfileHeader";
 import ProfileBody from "./ProfileBody";
 import { Users } from "../data/users";
+import ProfileActivities from "./ProfileActivities";
 
 class ProfileContainer extends Component {
     render() {
@@ -9,6 +10,7 @@ class ProfileContainer extends Component {
             <div className="profile-container">
                 <ProfileHeader user={Users.Meitar} />
                 <ProfileBody user={Users.Meitar}/>
+                <ProfileActivities updateTweet={this.props.updateTweet} tweets={this.props.userTweets}/>
             </div>
         );
     }

@@ -57,3 +57,52 @@
     width: 50px;
   }
 }
+
+.tweet {
+  border: 1px solid blue;
+  border-radius: 15px;
+  margin: 5px;
+  text-align: left;
+
+  b {
+    margin: 10px;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+  .post-actions {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px 0px 5px 0px;
+    padding: 5px;
+    border-radius: 15px;
+
+    .comment-button:hover {
+      fill: $light-blue-hover;
+      cursor: pointer;
+    }
+
+    .retweet-button:hover {
+      fill: darkseagreen;
+      cursor: pointer;
+    }
+
+    .like-button:hover, .like-button.clicked {
+      fill: red;
+      cursor: pointer;
+
+    }
+
+    .share-button:hover {
+      fill: $light-blue-hover;
+      cursor: pointer;
+    }
+
+    .delete-button:hover {
+      fill: saddlebrown;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { tweets } from "../data/tweets";
+import { Tweets } from "../data/tweets";
 import { userShape } from "../data/users";
 
 class ProfileHeader extends Component {
     countUserTweets = (userId) => {
-        return tweets.filter(tweet => tweet.author.id === userId).length;
+        return Tweets.filter(tweet => tweet.author.id === userId).length;
     }
 
     render() {

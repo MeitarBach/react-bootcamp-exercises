@@ -53,6 +53,46 @@
   width: 50px;
 }
 
+.tweet {
+  border: 1px solid blue;
+  border-radius: 15px;
+  margin: 5px;
+  text-align: left;
+}
+.tweet b {
+  margin: 10px;
+}
+.tweet p {
+  margin: 5px;
+}
+.tweet .post-actions {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px 0px 5px 0px;
+  padding: 5px;
+  border-radius: 15px;
+}
+.tweet .post-actions .comment-button:hover {
+  fill: lightskyblue;
+  cursor: pointer;
+}
+.tweet .post-actions .retweet-button:hover {
+  fill: darkseagreen;
+  cursor: pointer;
+}
+.tweet .post-actions .like-button:hover, .tweet .post-actions .like-button.clicked {
+  fill: red;
+  cursor: pointer;
+}
+.tweet .post-actions .share-button:hover {
+  fill: lightskyblue;
+  cursor: pointer;
+}
+.tweet .post-actions .delete-button:hover {
+  fill: saddlebrown;
+  cursor: pointer;
+}
+
 .page-container {
   display: flex;
   width: 80%;
@@ -96,48 +136,6 @@
 .page-container .newsfeed-container .newsfeed-post-editor textarea:focus {
   outline-color: deepskyblue;
 }
-.page-container .newsfeed-container .tweet {
-  border: 1px solid blue;
-  border-radius: 15px;
-  margin: 5px;
-  text-align: left;
-}
-.page-container .newsfeed-container .tweet b {
-  margin: 10px;
-}
-.page-container .newsfeed-container .tweet p {
-  margin: 5px;
-}
-.page-container .newsfeed-container .tweet .post-actions {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0px 0px 5px 0px;
-  padding: 5px;
-  border-radius: 15px;
-}
-.page-container .newsfeed-container .tweet .post-actions .comment-button:hover {
-  fill: lightskyblue;
-  cursor: pointer;
-}
-.page-container .newsfeed-container .tweet .post-actions .retweet-button:hover {
-  fill: darkseagreen;
-  cursor: pointer;
-}
-.page-container .newsfeed-container .tweet .post-actions .like-button:hover {
-  fill: red;
-  cursor: pointer;
-}
-.page-container .newsfeed-container .tweet .post-actions .like-button.liked {
-  background-color: rgba(255, 0, 0, 0.5);
-}
-.page-container .newsfeed-container .tweet .post-actions .share-button:hover {
-  fill: lightskyblue;
-  cursor: pointer;
-}
-.page-container .newsfeed-container .tweet .post-actions .delete-button:hover {
-  fill: saddlebrown;
-  cursor: pointer;
-}
 .page-container .profile-container {
   margin: 0px 100px;
   flex-grow: 2;
@@ -155,6 +153,9 @@
 }
 .page-container .profile-container .profile-header svg :hover {
   fill: lightskyblue;
+}
+.page-container .profile-container .profile-body {
+  text-align: left;
 }
 .page-container .profile-container .profile-body .cover-photo {
   height: 160px;
@@ -182,13 +183,13 @@
 .page-container .profile-container .profile-body h4 {
   margin: 0;
 }
-.page-container .profile-container .profile-about .profile-about__extra-details, .page-container .profile-container .profile-about .profile-about__following-followers {
+.page-container .profile-container .profile-body .profile-about .profile-about__extra-details, .page-container .profile-container .profile-body .profile-about .profile-about__following-followers {
   margin: 5px 0;
 }
-.page-container .profile-container .profile-about .profile-about__extra-details span, .page-container .profile-container .profile-about .profile-about__following-followers span {
+.page-container .profile-container .profile-body .profile-about .profile-about__extra-details span, .page-container .profile-container .profile-body .profile-about .profile-about__following-followers span {
   margin: 0 20px 0 0;
 }
-.page-container .profile-container .profile-about .profile-about__extra-details svg, .page-container .profile-container .profile-about .profile-about__following-followers svg {
+.page-container .profile-container .profile-body .profile-about .profile-about__extra-details svg, .page-container .profile-container .profile-body .profile-about .profile-about__following-followers svg {
   height: 1em;
   width: 1em;
 }
