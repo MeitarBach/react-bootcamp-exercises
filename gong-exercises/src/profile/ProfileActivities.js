@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Tweet from "../common/Tweet";
+import TweetItem from "../common/TweetItem";
 
 class ProfileActivities extends Component {
     render() {
@@ -13,7 +13,7 @@ class ProfileActivities extends Component {
                 </div>
                 <div className="profile-activity__tweets">
                     {this.props.tweets.map(tweet =>
-                            <Tweet updateTweet={this.props.updateTweet} tweetData={tweet} key={tweet.id}/>
+                            <TweetItem updateTweet={this.props.updateTweet} tweetData={tweet} key={tweet.id}/>
                         )
                     }
                 </div>

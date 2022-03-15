@@ -1,6 +1,6 @@
 import { Users } from "./users";
 
-export const Tweets = [
+const Tweets = [
     {
         id: 1,
         author: Users.Meitar,
@@ -20,3 +20,39 @@ export const Tweets = [
         isLiked: true,
     },
 ];
+
+export class Tweet {
+    constructor(id, author, content, isLiked) {
+        this.id = id;
+        this.author = author;
+        this.content = content;
+        this.isLiked = isLiked
+    }
+}
+
+export class TweetsApi {
+    static getTweets = () => {
+        return new Promise((resolve, reject) => {
+            try {
+                let tweets = JSON.parse(localStorage.getItem('tweets'));
+                if (!tweets) {
+                    tweets = Tweets;
+                    localStorage.setItem('tweets', JSON.stringify(tweets));
+                }
+                resolve(tweets);
+            } catch (err) {
+                reject(err);
+            }
+        })
+    }
+
+    static setTweets = (tweets) => {
+        localStorage.setItem('tweets', JSON.stringify(tweets));
+    }
+
+    static searchTweets = async (tweets, searchPhrase) => {
+        let filteredTweets = tweets.filter(tweet => tweet.content.includes(searchPhrase));
+
+        return filteredTweets;
+    }
+}

@@ -3,19 +3,23 @@ import "./style/style.css"
 import NavBarContainer from "./navbar/NavBarContainer";
 import MainSection, { Sections } from "./MainSection";
 import { Users } from "./data/users";
-import { Tweets } from "./data/tweets";
+import { TweetsApi } from "./data/tweets";
 import TrendsContainer from "./TrendsContainer";
 
 class PageContainer extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             mainSection: Sections.NEWS_FEED,
-            tweets: Tweets,
+            tweets: [],
             currentUser: Users.Meitar,
         };
 
+    }
+
+    async componentDidMount() {
+        let tweets = await TweetsApi.getTweets();
+        this.setState({ tweets });
     }
 
     changeSection = (newSection) => {
@@ -29,12 +33,14 @@ class PageContainer extends Component {
         const newTweet = {...tweetToUpdate, ...tweetUpdates};
         tweets.splice(tweetToUpdateIdx, 1, newTweet);
         this.setState({tweets: tweets});
+        TweetsApi.setTweets(tweets);
     }
 
     postTweet = (newTweet) => {
         let tweets = this.state.tweets;
         tweets.push(newTweet);
         this.setState({tweets: tweets});
+        TweetsApi.setTweets(tweets);
     }
 
     render() {

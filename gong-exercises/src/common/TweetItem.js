@@ -2,16 +2,7 @@ import React, {Component} from 'react';
 import ProfilePicture from "../profile/ProfilePicture";
 import PostAction, { ActionType } from "./PostAction";
 
-class Tweet extends Component {
-    constructor(id, author, content, isLiked, props) {
-        super(props);
-
-        this.id = id;
-        this.author = author;
-        this.content = content;
-        this.isLiked = isLiked
-    }
-
+class TweetItem extends Component {
     toggleLike = () => {
         this.props.updateTweet(this.props.tweetData.id, { isLiked: !this.props.tweetData.isLiked });
     }
@@ -34,4 +25,4 @@ class Tweet extends Component {
     }
 }
 
-export default Tweet;
+export default TweetItem;

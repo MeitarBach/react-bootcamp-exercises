@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { Tweets } from "../data/tweets";
+// import { Tweets } from "../data/tweets";
 import { userShape } from "../data/users";
 import { Sections } from "../MainSection";
 
 class ProfileHeader extends Component {
-    countUserTweets = (userId) => {
-        return Tweets.filter(tweet => tweet.author.id === userId).length;
-    }
+    // countUserTweets = (userId) => {
+    //     return Tweets.filter(tweet => tweet.author.id === userId).length;
+    // }
 
     render() {
         return (
@@ -20,7 +20,7 @@ class ProfileHeader extends Component {
                 </svg>
                 <div className="profile-title">
                     <h3 className="profile-title-name">{this.props.user.fullName}</h3>
-                    <span className="profile-title-tweets-num">{`${this.countUserTweets(this.props.user.id)} Tweets`}</span>
+                    <span className="profile-title-tweets-num">{`${this.props.tweetsCount} Tweets`}</span>
                 </div>
             </div>
         );

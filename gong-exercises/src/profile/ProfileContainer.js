@@ -8,7 +8,7 @@ class ProfileContainer extends Component {
     render() {
         return (
             <div className="profile-container">
-                <ProfileHeader changeSection={this.props.changeSection} user={this.props.user} />
+                <ProfileHeader tweetsCount={this.props.userTweets.length} changeSection={this.props.changeSection} user={this.props.user} />
                 <ProfileBody user={this.props.user}/>
                 <ProfileActivities updateTweet={this.props.updateTweet} tweets={this.props.userTweets}/>
             </div>

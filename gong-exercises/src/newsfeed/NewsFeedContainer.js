@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import NewsFeedPostEditor from "./NewsFeedPostEditor";
 import TweetsContainer from "./TweetsContainer";
-import Tweet from "../common/Tweet";
+import TweetItem from "../common/TweetItem";
 
 class NewsFeedContainer extends Component {
     render() {
@@ -10,7 +10,7 @@ class NewsFeedContainer extends Component {
                 <NewsFeedPostEditor user={this.props.user} postTweet={this.props.postTweet}/>
                 <div className="newsfeed-tweets">
                     {this.props.tweets.map(tweet =>
-                            <Tweet updateTweet={this.props.updateTweet} tweetData={tweet} key={tweet.id}/>
+                            <TweetItem updateTweet={this.props.updateTweet} tweetData={tweet} key={tweet.id}/>
                         )
                     }
                 </div>
