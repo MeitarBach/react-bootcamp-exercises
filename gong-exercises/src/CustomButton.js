@@ -15,7 +15,7 @@ export const ButtonType = {
 class CustomButton extends Component {
     render() {
         return (
-            <button className={this.props.btnType.className}>
+            <button onClick={this.props.onClick} className={this.props.btnType.className}>
                 {this.props.btnType.text}
             </button>
         );
@@ -26,7 +26,8 @@ CustomButton.propTypes = {
     btnType: PropTypes.shape({
         className: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired
-    })
+    }),
+    onClick: PropTypes.func.isRequired,
 }
 
 export default CustomButton;

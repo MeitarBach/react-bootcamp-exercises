@@ -3,6 +3,14 @@ import ProfilePicture from "../profile/ProfilePicture";
 import PostAction, { ActionType } from "./PostAction";
 
 class Tweet extends Component {
+    constructor(id, author, content, isLiked, props) {
+        super(props);
+
+        this.id = id;
+        this.author = author;
+        this.content = content;
+        this.isLiked = isLiked
+    }
 
     toggleLike = () => {
         this.props.updateTweet(this.props.tweetData.id, { isLiked: !this.props.tweetData.isLiked });

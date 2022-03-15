@@ -8,8 +8,8 @@ class ProfileContainer extends Component {
     render() {
         return (
             <div className="profile-container">
-                <ProfileHeader changeSection={this.props.changeSection} user={Users.Meitar} />
-                <ProfileBody user={Users.Meitar}/>
+                <ProfileHeader changeSection={this.props.changeSection} user={this.props.user} />
+                <ProfileBody user={this.props.user}/>
                 <ProfileActivities updateTweet={this.props.updateTweet} tweets={this.props.userTweets}/>
             </div>
         );

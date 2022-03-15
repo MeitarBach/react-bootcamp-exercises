@@ -31,11 +31,23 @@ class PageContainer extends Component {
         this.setState({tweets: tweets});
     }
 
+    postTweet = (newTweet) => {
+        let tweets = this.state.tweets;
+        tweets.push(newTweet);
+        this.setState({tweets: tweets});
+    }
+
     render() {
         return (
             <div className="page-container">
                 <NavBarContainer changeSection={this.changeSection}/>
-                <MainSection changeSection={this.changeSection} user={Users.Meitar} updateTweet={this.updateTweet} tweets={this.state.tweets}  openSection={this.state.mainSection}/>
+                <MainSection user={this.state.currentUser}
+                             tweets={this.state.tweets}
+                             openSection={this.state.mainSection}
+                             changeSection={this.changeSection}
+                             postTweet={this.postTweet}
+                             updateTweet={this.updateTweet}
+                />
                 <TrendsContainer/>
             </div>
         );

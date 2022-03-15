@@ -7,7 +7,7 @@ class NewsFeedContainer extends Component {
     render() {
         return (
             <div className="newsfeed-container">
-                <NewsFeedPostEditor/>
+                <NewsFeedPostEditor user={this.props.user} postTweet={this.props.postTweet}/>
                 <div className="newsfeed-tweets">
                     {this.props.tweets.map(tweet =>
                             <Tweet updateTweet={this.props.updateTweet} tweetData={tweet} key={tweet.id}/>
