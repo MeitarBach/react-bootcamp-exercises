@@ -43,6 +43,12 @@ class PageContainer extends Component {
         TweetsApi.setTweets(tweets);
     }
 
+    updateUserProfile = (userUpdates) => {
+        let user = this.state.currentUser;
+        const updatedUser = {...user, ...userUpdates};
+        this.setState({currentUser: updatedUser});
+    }
+
     render() {
         return (
             <div className="page-container">
@@ -53,6 +59,7 @@ class PageContainer extends Component {
                              changeSection={this.changeSection}
                              postTweet={this.postTweet}
                              updateTweet={this.updateTweet}
+                             updateUserProfile={this.updateUserProfile}
                 />
                 <TrendsContainer/>
             </div>

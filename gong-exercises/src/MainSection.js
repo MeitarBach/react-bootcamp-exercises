@@ -4,8 +4,15 @@ import ProfileContainer from "./profile/ProfileContainer";
 import PropTyes from "prop-types";
 
 export const Sections = {
+    TWEETER: '',
     NEWS_FEED: 'Home',
-    USER_PROFILE: 'Profile'
+    EXPLORE: 'Explore',
+    NOTIFICATIONS: 'Notifications',
+    MESSAGES: 'Messages',
+    BOOKMARKS: 'Bookmarks',
+    LISTS: 'Lists',
+    USER_PROFILE: 'Profile',
+    MORE: 'More',
 };
 
 class MainSection extends React.Component {
@@ -17,7 +24,7 @@ class MainSection extends React.Component {
         return (
             <>
                 {this.props.openSection === Sections.NEWS_FEED && <NewsFeedContainer user={this.props.user} postTweet={this.props.postTweet} updateTweet={this.props.updateTweet} tweets={this.props.tweets}/>}
-                {this.props.openSection === Sections.USER_PROFILE && <ProfileContainer user={this.props.user} changeSection={this.props.changeSection} updateTweet={this.props.updateTweet} userTweets={this.getUserTweets()}/>}
+                {this.props.openSection === Sections.USER_PROFILE && <ProfileContainer user={this.props.user} changeSection={this.props.changeSection} updateTweet={this.props.updateTweet} updateUserProfile={this.props.updateUserProfile} userTweets={this.getUserTweets()}/>}
             </>
         );
     }

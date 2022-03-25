@@ -9,6 +9,14 @@ export const ButtonType = {
     EDIT_PROFILE: {
         className: 'edit-profile-button',
         text: 'Edit profile'
+    },
+    CLOSE_BUTTON: {
+        className: 'close-button',
+        text: 'X'
+    },
+    SAVE_BUTTON: {
+        className: 'save-button',
+        text: 'Save'
     }
 }
 

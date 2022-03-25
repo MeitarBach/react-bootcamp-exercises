@@ -38,8 +38,29 @@
   margin: 20px;
 }
 
-.tweet-button:hover, .edit-profile-button:hover {
+.save-button {
+  display: block;
+  background-color: black;
+  border-radius: 9999px;
+  color: aliceblue;
+  width: 8em;
+  height: 2em;
+}
+
+.close-button {
+  border: none;
+  background: none;
+  border-radius: 20px;
+  width: 2em;
+}
+
+.tweet-button:hover, .edit-profile-button:hover, .save-button:hover {
   background-color: lightskyblue;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: lightskyblue;
   cursor: pointer;
 }
 
@@ -54,7 +75,7 @@
 }
 
 .tweet {
-  border: 1px solid blue;
+  border: 1px solid #1b9cef;
   border-radius: 15px;
   margin: 5px;
   text-align: left;
@@ -96,16 +117,17 @@
 .page-container {
   display: flex;
   width: 80%;
-  margin: auto;
+  margin: 5px auto auto;
 }
 .page-container .nav-container {
   flex-grow: 1;
 }
 .page-container .nav-container .nav-logo {
-  width: 10%;
+  fill: #1b9cef;
 }
 .page-container .nav-container .nav-logo svg {
   border-radius: 99999px;
+  height: 2.5em;
 }
 .page-container .nav-container .nav-logo :hover {
   background-color: lightskyblue;
@@ -113,7 +135,7 @@
 }
 .page-container .nav-container .nav-item {
   display: flex;
-  border: 1px solid blue;
+  border: 1px solid #1b9cef;
   border-radius: 15px;
   height: 2em;
   margin: 5px;
@@ -133,8 +155,21 @@
   flex-grow: 3;
   text-align: left;
 }
-.page-container .newsfeed-container .newsfeed-post-editor textarea:focus {
-  outline-color: deepskyblue;
+.page-container .newsfeed-container .newsfeed-post-editor {
+  border: 2px solid #1b9cef;
+  border-radius: 15px;
+}
+.page-container .newsfeed-container .newsfeed-post-editor .newsfeed-post-editor__post-tweet {
+  display: flex;
+}
+.page-container .newsfeed-container .newsfeed-post-editor .newsfeed-post-editor__post-tweet textarea {
+  width: 100%;
+  margin-top: 30px;
+  resize: none;
+  border: none;
+}
+.page-container .newsfeed-container .newsfeed-post-editor .newsfeed-post-editor__post-tweet textarea:focus {
+  outline: none;
 }
 .page-container .profile-container {
   margin: 0px 100px;
@@ -180,6 +215,36 @@
 }
 .page-container .profile-container .profile-body .profile-edit .profile-pic .profile-pic-captions {
   margin: 0px 20px;
+}
+.page-container .profile-container .profile-body .profile-edit .profile-editor {
+  width: 33%;
+}
+.page-container .profile-container .profile-body .profile-edit .profile-editor .profile-editor__header {
+  display: flex;
+  justify-content: space-between;
+}
+.page-container .profile-container .profile-body .profile-edit .profile-editor .profile-editor__header span {
+  font-weight: bold;
+}
+.page-container .profile-container .profile-body .profile-edit .profile-editor .profile-editor__form {
+  margin: 20px;
+}
+.page-container .profile-container .profile-body .profile-edit .profile-editor .profile-editor__form .form-input {
+  border: 1px solid lightblue;
+  margin: 10px;
+  border-radius: 4px;
+}
+.page-container .profile-container .profile-body .profile-edit .profile-editor .profile-editor__form .form-input label {
+  display: block;
+  font-weight: lighter;
+  font-size: 0.8em;
+  margin: 5px;
+}
+.page-container .profile-container .profile-body .profile-edit .profile-editor .profile-editor__form .form-input input, .page-container .profile-container .profile-body .profile-edit .profile-editor .profile-editor__form .form-input textarea, .page-container .profile-container .profile-body .profile-edit .profile-editor .profile-editor__form .form-input input:focus-visible {
+  border: none;
+  outline: none;
+  width: 98%;
+  margin: 0 2px;
 }
 .page-container .profile-container .profile-body h4 {
   margin: 0;

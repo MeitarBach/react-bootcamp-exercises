@@ -9,7 +9,7 @@ class NewsFeedPostEditor extends Component {
         super(props);
 
         this.state = {
-            postEditorText: 'Write your post!'
+            postEditorText: ''
         }
     }
 
@@ -25,8 +25,10 @@ class NewsFeedPostEditor extends Component {
     render() {
         return (
             <div className="newsfeed-post-editor">
-                <ProfilePicture user={this.props.user}/>
-                <textarea onChange={this.handleEditorTextChange} className="post-tweet-text-box">{this.state.postEditorText}</textarea>
+                <div className="newsfeed-post-editor__post-tweet">
+                    <ProfilePicture user={this.props.user}/>
+                    <textarea onChange={this.handleEditorTextChange} placeholder="Whats on your mind?" className="post-tweet-text-box">{this.state.postEditorText}</textarea>
+                </div>
                 <CustomButton onClick={this.handleTweetButtonClick} btnType={ButtonType.TWEET}/>
             </div>
         );

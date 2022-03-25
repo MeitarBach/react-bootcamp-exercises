@@ -4,8 +4,25 @@ import { userShape } from "../data/users";
 import ProfilePicture from "./ProfilePicture";
 import CustomButton, { ButtonType } from "../CustomButton";
 import { SVG } from "../assets/svgs/svgs";
+import ProfileEditor from "./ProfileEditor";
 
 class ProfileBody extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            showEditProfileDialog: false,
+        }
+    }
+
+    openEditProfileDialog = () => {
+        this.setState({showEditProfileDialog: true});
+    }
+
+    closeEditProfileDialog = () => {
+        this.setState({showEditProfileDialog: false});
+    }
+
     render() {
         return (
             <div className="profile-body">
@@ -14,21 +31,22 @@ class ProfileBody extends Component {
                 </div>
                 <div className="profile-edit">
                     <ProfilePicture user={this.props.user} captions />
-                    <CustomButton btnType={ButtonType.EDIT_PROFILE}/>
+                    <ProfileEditor showDialog={this.state.showEditProfileDialog} user={this.props.user} closeProfileEditor={this.closeEditProfileDialog}  updateUserProfile={this.props.updateUserProfile}/>
+                    <CustomButton onClick={this.openEditProfileDialog} btnType={ButtonType.EDIT_PROFILE}/>
                 </div>
                 <div className="profile-about">
                     <p>{this.props.user.about}</p>
                     <div className="profile-about__extra-details">
                         <span>
-                            {SVG.LOCATION}
+                            {SVG.profile.LOCATION}
                             <span>{this.props.user.location}</span>
                         </span>
                         <span>
-                            {SVG.WEBSITE}
+                            {SVG.profile.WEBSITE}
                             <span id="website">{this.props.user.website}</span>
                         </span>
                         <span>
-                            {SVG.JOIN_DATE}
+                            {SVG.profile.JOIN_DATE}
                             <span id="join-date">{this.props.user.joinDate}</span>
                         </span>
                     </div>

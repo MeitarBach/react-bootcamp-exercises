@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import meitarProfilePic from '../assets/images/meitar-profile.jpeg'
 import meitarCoverPhoto from '../assets/images/tignes.jpeg'
+import omerProfilePic from '../assets/images/omer-linkedin.jpeg';
 
 export const Users = {
     Meitar: {
@@ -14,7 +15,7 @@ export const Users = {
         about: "First of his name | Queen of the Andals | Breaker of chains",
         location: "Tel Aviv",
         website: "https://www.linkedin.com/in/meitar-bach/",
-        joinDate: "06.06.1994",
+        joinDate: "06-06-1994",
         followingIds: [2],
         followersIds: [2],
     },
@@ -24,7 +25,7 @@ export const Users = {
         lastName: "Zarzevsky Bach",
         fullName: "Omer Zarzevsky Bach",
         nickName: "Gozmus",
-        profilePic: meitarProfilePic,
+        profilePic: omerProfilePic,
         coverPhoto: meitarCoverPhoto,
         about: "First of his name | Queen of the Andals | Breaker of chains",
         location: "Tel Aviv",

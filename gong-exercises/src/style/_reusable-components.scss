@@ -42,8 +42,29 @@
   margin:20px;
 }
 
-.tweet-button:hover, .edit-profile-button:hover {
+.save-button {
+  display: block;
+  background-color: black;
+  border-radius: 9999px;
+  color: aliceblue;
+  width:8em;
+  height: 2em;
+}
+
+.close-button {
+  border: none;
+  background: none;
+  border-radius: 20px;
+  width: 2em;
+}
+
+.tweet-button:hover, .edit-profile-button:hover, .save-button:hover {
   background-color: $light-blue-hover;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: $light-blue-hover;
   cursor: pointer;
 }
 
@@ -59,7 +80,7 @@
 }
 
 .tweet {
-  border: 1px solid blue;
+  border: 1px solid $twitter-blue;
   border-radius: 15px;
   margin: 5px;
   text-align: left;
