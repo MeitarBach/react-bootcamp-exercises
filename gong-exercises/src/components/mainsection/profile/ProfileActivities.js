@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TweetItem from "../common/TweetItem";
+import TweetItem from "../../common/TweetItem";
 
 class ProfileActivities extends Component {
     render() {

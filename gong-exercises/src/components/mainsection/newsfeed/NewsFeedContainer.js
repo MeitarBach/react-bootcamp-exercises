@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import NewsFeedPostEditor from "./NewsFeedPostEditor";
 import TweetsContainer from "./TweetsContainer";
-import TweetItem from "../common/TweetItem";
+import TweetItem from "../../common/TweetItem";
 
 class NewsFeedContainer extends Component {
     render() {

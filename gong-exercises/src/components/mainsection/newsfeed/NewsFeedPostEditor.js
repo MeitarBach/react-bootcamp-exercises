@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import ProfilePicture from "../profile/ProfilePicture";
 import { v4 as uuid } from 'uuid';
-import CustomButton, { ButtonType } from "../CustomButton";
-import { Tweet } from "../data/tweets";
+import CustomButton, { ButtonType } from "../../common/CustomButton";
+import { Tweet } from "../../../data/tweets";
 
 class NewsFeedPostEditor extends Component {
     constructor(props) {

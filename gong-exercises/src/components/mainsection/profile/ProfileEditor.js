@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CustomButton, { ButtonType } from "../CustomButton";
+import CustomButton, { ButtonType } from "../../common/CustomButton";
 import PropTypes from 'prop-types';
 
 class FormInput extends Component {

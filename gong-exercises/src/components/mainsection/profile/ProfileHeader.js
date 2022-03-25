@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { userShape } from "../data/users";
+import { userShape } from "../../../data/users";
 import { Sections } from "../MainSection";
 
 class ProfileHeader extends Component {

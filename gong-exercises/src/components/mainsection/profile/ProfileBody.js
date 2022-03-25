@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { userShape } from "../data/users";
+import { userShape } from "../../../data/users";
 import ProfilePicture from "./ProfilePicture";
-import CustomButton, { ButtonType } from "../CustomButton";
-import { SVG } from "../assets/svgs/svgs";
+import CustomButton, { ButtonType } from "../../common/CustomButton";
+import { SVG } from "../../../assets/svgs/svgs";
 import ProfileEditor from "./ProfileEditor";
 
 class ProfileBody extends Component {

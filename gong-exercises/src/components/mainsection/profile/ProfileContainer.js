@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ProfileHeader from "./ProfileHeader";
 import ProfileBody from "./ProfileBody";
-import { Users } from "../data/users";
+import { Users } from "../../../data/users";
 import ProfileActivities from "./ProfileActivities";
 import ProfileEditor from "./ProfileEditor";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { SVG } from "../assets/svgs/svgs";
+import { SVG } from "../../assets/svgs/svgs";
 
 class NavItem extends React.Component {
 

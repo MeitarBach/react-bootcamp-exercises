@@ -1,10 +1,10 @@
 import React from 'react';
-import "../style/style.css"
+import "../../style/style.css"
 import PropTypes from 'prop-types';
-import CustomButton, {ButtonType} from "../CustomButton";
-import { Sections } from "../MainSection";
+import CustomButton, {ButtonType} from "../common/CustomButton";
+import { Sections } from "../mainsection/MainSection";
 import NavItem from "./NavItem";
-import { SVG } from "../assets/svgs/svgs";
+import { SVG } from "../../assets/svgs/svgs";
 
 class NavBarContainer extends React.Component {
   render() {

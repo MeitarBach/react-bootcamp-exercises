@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ProfilePicture from "../profile/ProfilePicture";
+import ProfilePicture from "../mainsection/profile/ProfilePicture";
 import PostAction, { ActionType } from "./PostAction";
 
 class TweetItem extends Component {

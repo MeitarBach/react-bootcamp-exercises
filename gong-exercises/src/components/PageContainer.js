@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import "./style/style.css"
+import "../style/style.css"
 import NavBarContainer from "./navbar/NavBarContainer";
-import MainSection, { Sections } from "./MainSection";
-import { Users } from "./data/users";
-import { TweetsApi } from "./data/tweets";
-import TrendsContainer from "./TrendsContainer";
+import MainSection, { Sections } from "./mainsection/MainSection";
+import { Users } from "../data/users";
+import { TweetsApi } from "../data/tweets";
+import TrendsContainer from "./trends/TrendsContainer";
 
 class PageContainer extends Component {
     constructor(props) {
